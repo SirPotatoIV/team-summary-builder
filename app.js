@@ -47,11 +47,9 @@ function createTeamMembers(employeeType){
                 const newIntern = new Intern(name, id, email, school);
                 team.push(newIntern);
                 createTeamMembers(employeeType);
-                // console.log("intern")
             });   
             break;
         case "None, team complete":
-            console.log(team)
             createHtml();
             break;
     }
@@ -69,12 +67,11 @@ function createHtml(){
     for(let i=0; i < team.length; i++){
         topHtmlArray.push(team[i].html);
     }
-    // console.log(topHtml);
     const finalHtmlArray = [...topHtmlArray,
         `</body>
         </html>`]
     const finalHtml = finalHtmlArray.join("");
     fs.writeFile("./output/team.html", finalHtml, function(){
-        console.log("html created!");
+        console.log("Team file created! Check ./output folder!")
     })
 }
