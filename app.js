@@ -7,15 +7,32 @@ const Intern = require('./lib/Intern');
 
 // The project must generate a `team.html` page in the `output` directory, that displays a nicely formatted team roster. Each team member should display the following in no particular order:
 const team = [];
-function createTeam(){
+function initialQuestions(){
     const tempManager = new Manager;
     inquirer
         .prompt(tempManager.questions)
         .then(answers => {
             const {name, id, email, officeNumber, employeeType} = answers;
             teamManager = new Manager(name, id, email, officeNumber);
-            console.log(teamManager);
+            team.push(teamManager);
+            console.log(team);
+            createTeamMembers(employeeType);
         });
     
 }
-createTeam();
+initialQuestions();
+
+function createTeamMembers(employeeType){
+
+    switch(employeeType){
+        case "engineer":
+            console.log("engineer")
+            break;
+        case "intern":
+            console.log("intern")
+            break;
+        case "None, team complete":
+            console.log("team complete")
+            break;
+    }
+}
