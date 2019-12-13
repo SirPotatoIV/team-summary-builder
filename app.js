@@ -2,6 +2,7 @@ const inquirer = require('inquirer');
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
+const fs = require('fs');
 // Used to get questions
 const tempEngineer = new Engineer;
 const tempIntern = new Intern;
@@ -57,7 +58,7 @@ function createTeamMembers(employeeType){
 }
 
 function createHtml(){
-    const topHtml = [`<!DOCTYPE html>
+    const topHtmlArray = [`<!DOCTYPE html>
     <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -66,8 +67,14 @@ function createHtml(){
         <title>Document</title>
         <link rel="stylesheet" href="style.css">`]
     for(let i=0; i < team.length; i++){
-        topHtml.push(team[i].html);
+        topHtmlArray.push(team[i].html);
     }
-    console.log(topHtml);
-
+    // console.log(topHtml);
+    const finalHtmlArray = [...topHtmlArray,
+        `</body>
+        </html>`]
+    const finalHtml = finalHtmlArray.join("");
+    fs.writeFile("./output/team.html", finalHtml, function(){
+        console.log("html created!");
+    })
 }
