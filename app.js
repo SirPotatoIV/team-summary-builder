@@ -49,9 +49,9 @@ function createTeamMembers(employeeType){
                 // console.log("intern")
             });   
             break;
-        // case "None, team complete":
-        //     console.log("team complete")
-        //     break;
+        case "None, team complete":
+            console.log(team)
+            break;
     }
 }
 
