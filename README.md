@@ -11,7 +11,7 @@ GIF of app working: Images to be added later. Sorry for the delay!
 ## Testing
 Currently all tests provided in the homework are passing.
 
-![Screen capture of showing all tests passing based on output from the application Jest](images\tests.png)
+![Screen capture of showing all tests passing based on output from the application Jest](./images/tests.png)
 
 ## Installation 
 Keep all files in a single folder and do not move files around within the folder. You must also have node.js and perform a ndm install to bring in all the necessary node modules. Run application using app.js as your node starting point.
