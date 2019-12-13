@@ -51,23 +51,23 @@ function createTeamMembers(employeeType){
             break;
         case "None, team complete":
             console.log(team)
+            createHtml();
             break;
     }
 }
 
-function askQuestions(){
-
-    inquirer
-        .prompt(tempManager.questions)
-        .then(answers => {
-            const {name, id, email, officeNumber, employeeType} = answers;
-            teamManager = new Manager(name, id, email, officeNumber);
-            team.push(teamManager);
-            console.log(team);
-            createTeamMembers(employeeType);
-        });
-}
-
 function createHtml(){
-    
+    const topHtml = [`<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">`]
+    for(let i=0; i < team.length; i++){
+        topHtml.push(team[i].html);
+    }
+    console.log(topHtml);
+
 }
