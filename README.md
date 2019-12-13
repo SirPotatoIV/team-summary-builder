@@ -4,7 +4,8 @@
 Node CLI app to create a project team based on prompts to the user and output an HTML file that shows the team and key information about the teammates.
 
 ## Images
-Sample image of HTML in a chrome browser. Currently not pretty. Hoping to update in the future. Checkout the output file for the actual output html.
+GIF demonstrating the Node CLI in action. Checkout the output file for the actual output html.
+![animation of the node command line input being used](./images/team-summary-builder-in-action.gif)
 
 ![image of what output HTML looks like opened in a chrome browser](./images/html-image.png)
 
