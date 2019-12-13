@@ -67,3 +67,7 @@ function askQuestions(){
             createTeamMembers(employeeType);
         });
 }
+
+function createHtml(){
+    
+}
