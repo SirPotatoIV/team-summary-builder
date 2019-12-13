@@ -12,7 +12,9 @@ function createTeam(){
     inquirer
         .prompt(tempManager.questions)
         .then(answers => {
-            console.log(answers);
+            const {name, id, email, officeNumber, employeeType} = answers;
+            teamManager = new Manager(name, id, email, officeNumber);
+            console.log(teamManager);
         });
     
 }
