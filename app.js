@@ -33,13 +33,22 @@ function createTeamMembers(employeeType){
             .prompt(tempEngineer.questions)
             .then(answers => {
                 const {name, id, email, github, employeeType} = answers;
-                console.log(name, id, email, github, employeeType);
-                
+                const newEngineer = new Engineer(name, id, email, github);
+                team.push(newEngineer);
+                createTeamMembers(employeeType);
             });
-            // break;
-        // case "intern":
-        //     console.log("intern")
-        //     break;
+            break;
+        case "intern":
+            inquirer
+            .prompt(tempIntern.questions)
+            .then(answers => {
+                const {name, id, email, school, employeeType} = answers;
+                const newIntern = new Intern(name, id, email, school);
+                team.push(newIntern);
+                createTeamMembers(employeeType);
+                // console.log("intern")
+            });   
+            break;
         // case "None, team complete":
         //     console.log("team complete")
         //     break;
