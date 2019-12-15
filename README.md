@@ -16,7 +16,7 @@ Currently all tests provided in the homework are passing.
 ![Screen capture of showing all tests passing based on output from the application Jest](./images/tests.png)
 
 ## Installation 
-Keep all files in a single folder and do not move files around within the folder. You must also have node.js and perform a ndm install to bring in all the necessary node modules. Run application using app.js as your node starting point.
+Keep all files in a single folder and do not move files around within the folder. You must also have node.js and perform a npm install to bring in all the necessary node modules. Run application using app.js as your node starting point.
 
 ## Usage 
 This was primarily made to meet the requirements of a homework assignment. You could use this to as the basis of how to generate sn HTML to have an image of your full team and contact info for reference, or could modify it to create other diagrams of teams.
